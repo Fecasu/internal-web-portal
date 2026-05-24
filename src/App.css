@@ -5,7 +5,8 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #f4f6f8;
+  background:
+    linear-gradient(135deg, #0f172a 0%, #1e3a8a 45%, #e0f2fe 100%);
   color: #1f2937;
 }
 
@@ -22,6 +23,10 @@ textarea {
 
 .app {
   min-height: 100vh;
+  max-width: 1180px;
+  margin: 0 auto;
+  background-color: #f8fafc;
+  box-shadow: 0 24px 80px rgba(15, 23, 42, 0.25);
 }
 
 .header {
@@ -35,10 +40,17 @@ textarea {
   gap: 24px;
 }
 
+h1,
+h2,
+h3 {
+  color: #0f172a;
+}
+
 .eyebrow {
   margin: 0 0 6px;
   font-size: 14px;
-  color: #6b7280;
+  color: #64748b;
+  font-weight: 600;
 }
 
 .header h1 {
@@ -51,6 +63,7 @@ textarea {
   align-items: center;
   gap: 10px;
   font-weight: 600;
+  color: #0f172a;
 }
 
 .user-avatar {
@@ -71,8 +84,9 @@ textarea {
 .sidebar {
   width: 240px;
   padding: 24px;
-  background-color: #111827;
-  color: #ffffff;
+  background-color: #ffffff;
+  border-right: 1px solid #e5e7eb;
+  color: #1f2937;
 }
 
 .nav {
@@ -86,18 +100,20 @@ textarea {
 .nav-link {
   padding: 12px 14px;
   border-radius: 10px;
-  color: #d1d5db;
+  color: #475569;
+  font-weight: 600;
 }
 
 .nav-link:hover,
 .nav-link.active {
-  background-color: #1f2937;
+  background-color: #2563eb;
   color: #ffffff;
 }
 
 .main-content {
   flex: 1;
   padding: 32px;
+  padding-bottom: 80px;
 }
 
 .welcome-card,
@@ -107,6 +123,7 @@ textarea {
   background-color: #ffffff;
   border: 1px solid #e5e7eb;
   border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
 }
 
 .welcome-card {
@@ -118,12 +135,13 @@ textarea {
 .section h2 {
   margin: 0 0 10px;
   font-size: 24px;
+  color: #0f172a;
 }
 
 .welcome-card p,
 .news-card p,
 .document-item p {
-  color: #6b7280;
+  color: #64748b;
 }
 
 .cards-grid {
@@ -139,11 +157,12 @@ textarea {
 
 .card p {
   margin: 0 0 12px;
-  color: #6b7280;
+  color: #64748b;
 }
 
 .card strong {
   font-size: 32px;
+  color: #0f172a;
 }
 
 .section {
@@ -164,6 +183,14 @@ textarea {
   padding: 12px 14px;
   border: 1px solid #d1d5db;
   border-radius: 10px;
+  background-color: #ffffff;
+  color: #111827;
+}
+
+.section-header input::placeholder,
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #94a3b8;
 }
 
 .document-list {
@@ -176,6 +203,7 @@ textarea {
   padding: 16px;
   border: 1px solid #e5e7eb;
   border-radius: 14px;
+  background-color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -221,6 +249,7 @@ textarea {
   display: grid;
   gap: 8px;
   font-weight: 600;
+  color: #0f172a;
 }
 
 .contact-form input,
@@ -228,10 +257,12 @@ textarea {
   padding: 12px 14px;
   border: 1px solid #d1d5db;
   border-radius: 10px;
+  background-color: #ffffff;
+  color: #111827;
 }
 
 .contact-form textarea {
-  min-height: 120px;
+  min-height: 140px;
   resize: vertical;
 }
 
@@ -257,6 +288,10 @@ textarea {
 }
 
 @media (max-width: 768px) {
+  .app {
+    max-width: none;
+  }
+
   .header {
     align-items: flex-start;
     flex-direction: column;
@@ -268,6 +303,8 @@ textarea {
 
   .sidebar {
     width: 100%;
+    border-right: 0;
+    border-bottom: 1px solid #e5e7eb;
   }
 
   .nav {
@@ -278,6 +315,7 @@ textarea {
 
   .main-content {
     padding: 24px;
+    padding-bottom: 64px;
   }
 
   .cards-grid,
